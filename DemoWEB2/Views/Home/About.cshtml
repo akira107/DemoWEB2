@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"]= "Gioi thieu";
+}
+<h1>Gioi thieu</h1>
+
+<form asp-controller="Home" asp-action="PrintMessage">
+    <table>
+        <tr>
+            <td>Ho va Ten</td>
+            <td><input name="Name" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Gioi tinh</td>
+            <td><select name="Sex" type="text" >
+                <option value="Nam">Nam</option>
+                <option value="Nu">Nu</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Dia chi</td>
+            <td><input name="Address" type="text" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input id="Submit" type="submit" value="Save Details"/></td>
+        </tr>
+    </table>
+</form>
+<br/>
+<h2 style="background-color:burlywood; padding:10px">
+    Ho va Ten: @ViewBag.Name
+    <br/>
+    Gioi ting: @ViewBag.Sex
+    <br/>
+    Dia chi: @ViewBag.Address
+</h2>
